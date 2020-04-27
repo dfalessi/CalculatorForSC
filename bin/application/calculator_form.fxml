@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="calc" prefHeight="700.0" prefWidth="450" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CalculatorFormController">
+   <children>
+      <ScrollPane fx:id="scroll" hbarPolicy="NEVER" maxHeight="200" prefHeight="200">
+         <content>
+            <VBox fx:id="histBox" alignment="BOTTOM_RIGHT" prefHeight="200" prefWidth="450" styleClass="hist-box" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="equationLabel" alignment="CENTER_RIGHT" text="" textAlignment="JUSTIFY" wrapText="true">
+      </Label>
+      <Separator prefWidth="200.0" />
+      <GridPane VBox.vgrow="ALWAYS">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="zeroButton" focusTraversable="false" mnemonicParsing="false" onAction="#handleButton" text="0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button fx:id="decimalButton" focusTraversable="false" mnemonicParsing="false" onAction="#handleButton" text="." GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Button fx:id="equalButton" mnemonicParsing="false" onAction="#handleEqual" text="=" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Button fx:id="oneButton" focusTraversable="false" mnemonicParsing="false" onAction="#handleButton" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="twoButton" focusTraversable="false" mnemonicParsing="false" onAction="#handleButton" text="2" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button fx:id="threeButton" focusTraversable="false" mnemonicParsing="false" onAction="#handleButton" text="3" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button fx:id="plusButton" focusTraversable="false" mnemonicParsing="false" onAction="#handleButton" text="+" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Button fx:id="fourButton" focusTraversable="false" mnemonicParsing="false" onAction="#handleButton" text="4" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="fiveButton" focusTraversable="false" mnemonicParsing="false" onAction="#handleButton" text="5" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="sixButton" focusTraversable="false" mnemonicParsing="false" onAction="#handleButton" text="6" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button fx:id="minusButton" focusTraversable="false" mnemonicParsing="false" onAction="#handleButton" text="-" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Button fx:id="sevenButton" focusTraversable="false" mnemonicParsing="false" onAction="#handleButton" text="7" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="eightButton" focusTraversable="false" mnemonicParsing="false" onAction="#handleButton" text="8" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="nineButton" focusTraversable="false" mnemonicParsing="false" onAction="#handleButton" text="9" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button fx:id="multiplyButton" focusTraversable="false" mnemonicParsing="false" onAction="#handleButton" text="*" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Button fx:id="clearButton" focusTraversable="false" mnemonicParsing="false" onAction="#handleClear" text="C" GridPane.columnIndex="1" />
+            <Button fx:id="deleteButton" focusTraversable="false" mnemonicParsing="false" onAction="#handleDelete" text="del" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button fx:id="divideButton" focusTraversable="false" mnemonicParsing="false" onAction="#handleButton" text="/" GridPane.columnIndex="4" />
+            <Button fx:id="leftBrace" focusTraversable="false" mnemonicParsing="false" onAction="#handleButton" text="(" GridPane.columnIndex="2" />
+            <Button fx:id="rightBrace" focusTraversable="false" mnemonicParsing="false" onAction="#handleButton" text=")" GridPane.columnIndex="3" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#handleButton" text="^" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#handleButton" text="sqrt(" GridPane.rowIndex="1" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#handleButton" text="sin(" GridPane.rowIndex="2" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#handleButton" text="cos(" GridPane.rowIndex="3" />
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#handleButton" text="tan(" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+   </children>
+</VBox>

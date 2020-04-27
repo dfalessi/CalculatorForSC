@@ -1,0 +1,33 @@
+ScrollPane {
+    -fx-background: "#263238";
+    -fx-background-color: "#263238";
+}
+
+.hist-box {
+	-fx-padding: 0 20px 0 0;
+}
+
+VBox {
+    -fx-background-color: "#263238";
+}
+
+Label {
+    -fx-text-fill: "#fafafa";
+    -fx-font: 26px Consolas;
+    -fx-pref-width: 450px;
+    -fx-pref-height: 30px;
+}
+
+Button {
+    -fx-background-color: "#212121";
+    -fx-text-fill: "#fafafa";
+    -fx-font: 18px Consolas;
+    -fx-pref-width: 80px;
+    -fx-pref-height: 80px;
+}
+Button:hover {
+    -fx-background-color: "#424242";
+}
+Button:pressed {
+    -fx-background-color: "#eeeeee";
+}
